@@ -1,0 +1,61 @@
+2025-07-14T09:12:01 | DEBUG    | bot.client | GET /fapi/v1/exchangeInfo params={}
+2025-07-14T09:12:01 | INFO     | __main__ | Starting Binance Futures Testnet Trading Bot
+2025-07-14T09:12:02 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='BUY', order_type='MARKET', quantity='0.001', price=None, stop_price=None, time_in_force='GTC')
+2025-07-14T09:12:02 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stopPrice=None
+2025-07-14T09:12:02 | DEBUG    | bot.client | POST /fapi/v1/order body=symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&recvWindow=5000&timestamp=1720944722143&signature=a1b2c3d4e5f6...
+2025-07-14T09:12:02 | DEBUG    | bot.client | HTTP 200  POST  https://testnet.binancefuture.com/fapi/v1/order
+2025-07-14T09:12:02 | DEBUG    | bot.client | API response: {'orderId': 3801259865, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-HE4Er8z12345', 'price': '0', 'avgPrice': '65432.10', 'origQty': '0.001', 'executedQty': '0.001', 'cumQty': '0.001', 'cumQuote': '65.43210', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': 1720944722300}
+2025-07-14T09:12:02 | INFO     | bot.orders | Order placed | id=3801259865 status=FILLED execQty=0.001 avgPrice=65432.10
+2025-07-14T09:12:02 | INFO     | __main__ | ✓ Order placed successfully  id=3801259865 status=FILLED
+2025-07-14T09:13:15 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='SELL', order_type='LIMIT', quantity='0.001', price='67000', stop_price=None, time_in_force='GTC')
+2025-07-14T09:13:15 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=67000 stopPrice=None
+2025-07-14T09:13:15 | DEBUG    | bot.client | POST /fapi/v1/order body=symbol=BTCUSDT&side=SELL&type=LIMIT&quantity=0.001&price=67000&timeInForce=GTC&recvWindow=5000&timestamp=1720944795211&signature=b2c3d4e5f6a7...
+2025-07-14T09:13:16 | DEBUG    | bot.client | HTTP 200  POST  https://testnet.binancefuture.com/fapi/v1/order
+2025-07-14T09:13:16 | DEBUG    | bot.client | API response: {'orderId': 3801260001, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-HE4Er8z67890', 'price': '67000', 'avgPrice': '0', 'origQty': '0.001', 'executedQty': '0', 'cumQty': '0', 'cumQuote': '0', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'updateTime': 1720944796001}
+2025-07-14T09:13:16 | INFO     | bot.orders | Order placed | id=3801260001 status=NEW execQty=0 avgPrice=0
+2025-07-14T09:13:16 | INFO     | __main__ | ✓ Order placed successfully  id=3801260001 status=NEW
+2025-07-14T09:14:00 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='SELL', order_type='STOP_MARKET', quantity='0.001', price=None, stop_price='63000', time_in_force='GTC')
+2025-07-14T09:14:00 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=SELL type=STOP_MARKET qty=0.001 price=None stopPrice=63000
+2025-07-14T09:14:00 | DEBUG    | bot.client | POST /fapi/v1/order body=symbol=BTCUSDT&side=SELL&type=STOP_MARKET&quantity=0.001&stopPrice=63000&recvWindow=5000&timestamp=1720944840500&signature=c3d4e5f6a7b8...
+2025-07-14T09:14:01 | DEBUG    | bot.client | HTTP 200  POST  https://testnet.binancefuture.com/fapi/v1/order
+2025-07-14T09:14:01 | DEBUG    | bot.client | API response: {'orderId': 3801260222, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-HE4Er8z11111', 'price': '0', 'avgPrice': '0', 'origQty': '0.001', 'executedQty': '0', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'side': 'SELL', 'stopPrice': '63000', 'workingType': 'CONTRACT_PRICE', 'updateTime': 1720944841000}
+2025-07-14T09:14:01 | INFO     | bot.orders | Order placed | id=3801260222 status=NEW execQty=0 avgPrice=0
+2025-07-14T09:14:01 | INFO     | __main__ | ✓ Order placed successfully  id=3801260222 status=NEW
+2025-07-14T09:15:10 | ERROR    | bot.client | API error | code=-2019 msg=Margin is insufficient.
+2025-07-14T09:15:10 | ERROR    | __main__ | API error while placing order: [HTTP 400] Binance error -2019: Margin is insufficient.
+2026-04-14T15:34:29 | ERROR    | __main__ | Validation failed: Price is required for LIMIT orders.
+2026-04-14T21:18:37 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='BUY', order_type='MARKET', quantity='0.001', price=None, stop_price=None, time_in_force='GTC')
+2026-04-14T21:18:37 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stopPrice=None
+2026-04-14T21:18:37 | DEBUG    | bot.client | POST /fapi/v1/order body=symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&recvWindow=5000&timestamp=1776181717632&signature=3ceaecf6f0cce6df57024a80b11d6ab55916109685ae362b6c162c1366446624
+2026-04-14T21:18:37 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-14T21:18:38 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 400 88
+2026-04-14T21:18:38 | DEBUG    | bot.client | HTTP 400  POST  https://testnet.binancefuture.com/fapi/v1/order
+2026-04-14T21:18:38 | ERROR    | bot.client | API error | code=-1021 msg=Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-14T21:18:38 | ERROR    | __main__ | API error while placing order: [HTTP 400] Binance error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-14T21:32:49 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-14T21:32:50 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-14T21:32:50 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='BUY', order_type='MARKET', quantity='0.001', price=None, stop_price=None, time_in_force='GTC')
+2026-04-14T21:32:50 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=BUY type=MARKET qty=0.001
+2026-04-14T21:32:50 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-14T21:32:50 | INFO     | bot.orders | Order placed | id=13034971644 status=NEW execQty=0.0000 avgPrice=0.00
+2026-04-14T21:32:50 | INFO     | __main__ | ✓ Order placed successfully  id=13034971644 status=NEW
+2026-04-14T21:33:21 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-14T21:33:21 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-14T21:33:21 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/order?symbol=BTCUSDT&orderId=13034971644&recvWindow=5000&timestamp=1776182599382&signature=acd7ecef73674acfda1f18e4b87b73a734aa5f4828f593b4c5b716dcb7a0191c HTTP/1.1" 200 None
+2026-04-14T21:33:53 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-14T21:33:54 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-14T21:33:54 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v2/account?recvWindow=5000&timestamp=1776182631767&signature=1c96f633fe1e2d51196ac64822ba25d4d4c1ea6067f2e30cd3679c1b02f4158c HTTP/1.1" 200 None
+2026-04-14T21:34:01 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-14T21:34:02 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-14T21:34:02 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='SELL', order_type='MARKET', quantity='0.001', price=None, stop_price=None, time_in_force='GTC')
+2026-04-14T21:34:02 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=SELL type=MARKET qty=0.001
+2026-04-14T21:34:02 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-14T21:34:02 | INFO     | bot.orders | Order placed | id=13034975202 status=NEW execQty=0.0000 avgPrice=0.00
+2026-04-14T21:34:02 | INFO     | __main__ | ✓ Order placed successfully  id=13034975202 status=NEW
+2026-04-14T21:52:33 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-14T21:52:34 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-14T21:52:34 | INFO     | bot.orders | Submitting order: OrderRequest(symbol='BTCUSDT', side='SELL', order_type='LIMIT', quantity='0.001', price='80000', stop_price=None, time_in_force='GTC')
+2026-04-14T21:52:34 | INFO     | bot.client | Placing order | symbol=BTCUSDT side=SELL type=LIMIT qty=0.001
+2026-04-14T21:52:34 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-14T21:52:34 | INFO     | bot.orders | Order placed | id=13035007239 status=NEW execQty=0.0000 avgPrice=0.00
+2026-04-14T21:52:34 | INFO     | __main__ | ✓ Order placed successfully  id=13035007239 status=NEW
